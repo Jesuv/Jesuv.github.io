@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Educación en Línea</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Estilos básicos */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+            font-weight: bold;
+        }
+        nav a:hover {
+            background-color: #555;
+            border-radius: 5px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+        section {
+            margin-bottom: 20px;
+        }
+        h2 {
+            color: #007BFF;
+        }
+        .content-image {
+            display: block;
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        /* Ventana modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding-top: 60px;
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 600px;
+            border-radius: 5px;
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Educación en Línea</h1>
+</header>
+
+<nav>
+    <a href="#objetivo">Objetivo</a>
+    <a href="#contenido">Contenido</a>
+    <a href="#plataformas">Plataformas</a>
+    <a href="#diseño">Diseño</a>
+    <a href="#marketing">Marketing</a>
+    <a href="#monetizacion">Monetización</a>
+    <a href="#evaluacion">Evaluación</a>
+</nav>
+
+<div class="container">
+    <!-- Sección 1 -->
+    <section id="objetivo">
+        <h2>1. Definición del Objetivo</h2>
+        <p>Define el tipo de educación, público objetivo y otros elementos que guiarán tu proyecto educativo en línea.</p>
+        <img src="https://via.placeholder.com/800x400" alt="Imagen de objetivo" class="content-image">
+        <button id="objetivoModalBtn">Ver más detalles</button>
+    </section>
+
+    <!-- Ventana Modal Objetivo -->
+    <div id="objetivoModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('objetivoModal')">&times;</span>
+            <h3>Definición del Objetivo</h3>
+            <p>Decidir entre cursos académicos, formación profesional, habilidades específicas, o aprendizaje autodidacta es clave para un sitio de educación en línea...</p>
+        </div>
+    </div>
+
+    <!-- Sección 2 -->
+    <section id="contenido">
+        <h2>2. Contenido</h2>
+        <p>Incluye diferentes tipos de cursos como en vivo, grabados, o seminarios, en varios formatos para adaptarse a los usuarios.</p>
+        <img src="https://via.placeholder.com/800x400" alt="Imagen de contenido" class="content-image">
+        <button id="contenidoModalBtn">Ver más detalles</button>
+    </section>
+
+    <!-- Ventana Modal Contenido -->
+    <div id="contenidoModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('contenidoModal')">&times;</span>
+            <h3>Contenido</h3>
+            <p>Los cursos pueden ser en vivo, grabados o en seminarios. Cada uno ofrece diferentes niveles de flexibilidad y aprendizaje a los usuarios...</p>
+        </div>
+    </div>
+
+    <!-- Sección 3 -->
+    <section id="plataformas">
+        <h2>3. Plataformas</h2>
+        <p>Escoge la mejor plataforma para alojar y gestionar tu contenido educativo, como WordPress, Moodle o Udemy.</p>
+        <img src="https://via.placeholder.com/800x400" alt="Imagen de plataformas" class="content-image">
+        <button id="plataformasModalBtn">Ver más detalles</button>
+    </section>
+
+    <!-- Ventana Modal Plataformas -->
+    <div id="plataformasModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('plataformasModal')">&times;</span>
+            <h3>Plataformas</h3>
+            <p>WordPress y Moodle son opciones recomendadas para educación en línea, ofreciendo herramientas específicas para el aprendizaje...</p>
+        </div>
+    </div>
+
+    <!-- Otras secciones (Diseño, Marketing, etc.) pueden seguir la misma estructura... -->
+
+</div>
+
+<footer>
+    <p>&copy; 2023 Educación en Línea | <a href="#contact">Contacto</a> | <a href="#privacy">Política de privacidad</a></p>
+</footer>
+
+<script>
+    // Función para abrir y cerrar modales
+    function openModal(modalId) {
+        document.getElementById(modalId).style.display = "block";
+    }
+    function closeModal(modalId) {
+        document.getElementById(modalId).style.display = "none";
+    }
+
+    // Abrir modales
+    document.getElementById('objetivoModalBtn').onclick = function() {
+        openModal('objetivoModal');
+    }
+    document.getElementById('contenidoModalBtn').onclick = function() {
+        openModal('contenidoModal');
+    }
+    document.getElementById('plataformasModalBtn').onclick = function() {
+        openModal('plataformasModal');
+    }
+    
+    // Cerrar modales cuando el usuario haga clic fuera del modal
+    window.onclick = function(event) {
+        let modals = document.getElementsByClassName('modal');
+        for (let modal of modals) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    }
+</script>
+
+</body>
+  </html>
