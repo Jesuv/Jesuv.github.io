@@ -53,6 +53,32 @@
             border-radius: 5px;
             margin-top: 10px;
         }
+        /* Animación de libros */
+        .book-animation {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .book {
+            width: 50px;
+            height: 70px;
+            background-color: #007BFF;
+            border-radius: 5px;
+            transform-origin: bottom;
+            animation: bounce 2s infinite;
+        }
+        .book:nth-child(1) { animation-delay: 0s; }
+        .book:nth-child(2) { animation-delay: 0.2s; }
+        .book:nth-child(3) { animation-delay: 0.4s; }
+        .book:nth-child(4) { animation-delay: 0.6s; }
+        .book:nth-child(5) { animation-delay: 0.8s; }
+
+        @keyframes bounce {
+            0%, 100% { transform: scaleY(1); }
+            50% { transform: scaleY(0.8); }
+        }
         /* Ventana modal */
         .modal {
             display: none;
@@ -120,6 +146,15 @@
         <p>Define el tipo de educación, público objetivo y otros elementos que guiarán tu proyecto educativo en línea.</p>
         <img src="https://source.unsplash.com/800x400/?education,learning" alt="Imagen de objetivo" class="content-image">
         <button id="objetivoModalBtn">Ver más detalles</button>
+        
+        <!-- Animación de libros -->
+        <div class="book-animation">
+            <div class="book"></div>
+            <div class="book"></div>
+            <div class="book"></div>
+            <div class="book"></div>
+            <div class="book"></div>
+        </div>
     </section>
 
     <!-- Ventana Modal Objetivo -->
@@ -137,6 +172,15 @@
         <p>Incluye diferentes tipos de cursos como en vivo, grabados, o seminarios, en varios formatos para adaptarse a los usuarios.</p>
         <img src="https://source.unsplash.com/800x400/?online,courses" alt="Imagen de contenido" class="content-image">
         <button id="contenidoModalBtn">Ver más detalles</button>
+        
+        <!-- Animación de libros -->
+        <div class="book-animation">
+            <div class="book"></div>
+            <div class="book"></div>
+            <div class="book"></div>
+            <div class="book"></div>
+            <div class="book"></div>
+        </div>
     </section>
 
     <!-- Ventana Modal Contenido -->
@@ -154,6 +198,15 @@
         <p>Escoge la mejor plataforma para alojar y gestionar tu contenido educativo, como WordPress, Moodle o Udemy.</p>
         <img src="https://source.unsplash.com/800x400/?technology,platform" alt="Imagen de plataformas" class="content-image">
         <button id="plataformasModalBtn">Ver más detalles</button>
+
+        <!-- Animación de libros -->
+        <div class="book-animation">
+            <div class="book"></div>
+            <div class="book"></div>
+            <div class="book"></div>
+            <div class="book"></div>
+            <div class="book"></div>
+        </div>
     </section>
 
     <!-- Ventana Modal Plataformas -->
@@ -193,16 +246,4 @@
         openModal('plataformasModal');
     }
     
-    // Cerrar modales cuando el usuario haga clic fuera del modal
-    window.onclick = function(event) {
-        let modals = document.getElementsByClassName('modal');
-        for (let modal of modals) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-        }
-    }
-</script>
-
-</body>
-    </html>
+    // Cerrar modales cuando el usuario haga clic fuera
