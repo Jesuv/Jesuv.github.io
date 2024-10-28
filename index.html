@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Educación en Línea</title>
-    <link rel="stylesheet" href="styles.css">
     <style>
         /* Estilos básicos */
         body {
@@ -53,7 +52,6 @@
             border-radius: 5px;
             margin-top: 10px;
         }
-        /* Animación de libros */
         .book-animation {
             display: flex;
             justify-content: center;
@@ -74,12 +72,10 @@
         .book:nth-child(3) { animation-delay: 0.4s; }
         .book:nth-child(4) { animation-delay: 0.6s; }
         .book:nth-child(5) { animation-delay: 0.8s; }
-
         @keyframes bounce {
             0%, 100% { transform: scaleY(1); }
             50% { transform: scaleY(0.8); }
         }
-        /* Ventanas modales */
         .modal {
             display: none;
             position: fixed;
@@ -113,7 +109,6 @@
             text-decoration: none;
             cursor: pointer;
         }
-        /* Footer */
         footer {
             text-align: center;
             padding: 20px;
@@ -133,18 +128,15 @@
     <a href="#objetivo">Objetivo</a>
     <a href="#contenido">Contenido</a>
     <a href="#plataformas">Plataformas</a>
-    <a href="#diseño">Diseño</a>
-    <a href="#marketing">Marketing</a>
-    <a href="#monetizacion">Monetización</a>
-    <a href="#evaluacion">Evaluación</a>
+    <a href="#beneficios">Beneficios</a>
+    <a href="#testimonios">Testimonios</a>
 </nav>
 
 <div class="container">
-    <!-- Sección 1 -->
     <section id="objetivo">
         <h2>1. Definición del Objetivo</h2>
-        <p>Define el tipo de educación, público objetivo y otros elementos que guiarán tu proyecto educativo en línea.</p>
-        <img src="https://source.unsplash.com/800x400/?education,learning" alt="Imagen de objetivo" class="content-image">
+        <p>Para iniciar un proyecto educativo en línea, es crucial definir claramente su objetivo. Decide si te enfocarás en temas académicos, desarrollo profesional, habilidades específicas o educación autodidacta. La claridad en tu propósito ayudará a definir el público objetivo, las necesidades de contenido y el enfoque pedagógico.</p>
+        <p>Establecer un objetivo específico facilitará la creación de materiales adecuados y un diseño de curso que maximice el aprendizaje.</p>
         <button onclick="openModal('objetivoModal')">Ver más detalles</button>
         
         <div class="book-animation">
@@ -160,83 +152,55 @@
         <div class="modal-content">
             <span class="close" onclick="closeModal('objetivoModal')">&times;</span>
             <h3>Definición del Objetivo</h3>
-            <p>El objetivo del sitio de educación en línea depende del público que desea alcanzar. Decide entre cursos académicos, formación profesional...</p>
+            <p>Al definir el objetivo, asegúrate de considerar aspectos como la accesibilidad, el nivel de conocimiento necesario y el estilo de enseñanza que aplicarás. Esto te permitirá atraer estudiantes interesados y motivados a lograr el objetivo planteado en tu proyecto educativo.</p>
         </div>
     </div>
 
-    <!-- Sección 2 -->
     <section id="contenido">
         <h2>2. Contenido</h2>
-        <p>Incluye diferentes tipos de cursos como en vivo, grabados, o seminarios, en varios formatos para adaptarse a los usuarios.</p>
-        <img src="https://source.unsplash.com/800x400/?online,courses" alt="Imagen de contenido" class="content-image">
+        <p>El contenido es la esencia de cualquier curso en línea. Puedes optar por clases en vivo, grabaciones o incluso seminarios interactivos, dependiendo de los objetivos de aprendizaje. Cada formato permite abordar distintos estilos de aprendizaje y nivel de profundidad en los temas.</p>
+        <p>Considera también incluir lecturas adicionales, actividades prácticas, y cuestionarios para enriquecer la experiencia del usuario y asegurar un aprendizaje integral.</p>
         <button onclick="openModal('contenidoModal')">Ver más detalles</button>
-
-        <div class="book-animation">
-            <div class="book"></div>
-            <div class="book"></div>
-            <div class="book"></div>
-            <div class="book"></div>
-            <div class="book"></div>
-        </div>
     </section>
 
     <div id="contenidoModal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal('contenidoModal')">&times;</span>
             <h3>Contenido</h3>
-            <p>Los cursos pueden ser en vivo, grabados o en seminarios, cada uno ofrece diferentes niveles de flexibilidad y aprendizaje...</p>
+            <p>Para una experiencia completa, es recomendable estructurar el contenido de forma modular y accesible, permitiendo a los estudiantes seguir su propio ritmo. Los cuestionarios y las evaluaciones intermedias ayudan a reforzar el aprendizaje.</p>
         </div>
     </div>
 
-    <!-- Sección 3 -->
     <section id="plataformas">
         <h2>3. Plataformas</h2>
-        <p>Escoge la mejor plataforma para alojar y gestionar tu contenido educativo, como WordPress, Moodle o Udemy.</p>
-        <img src="https://source.unsplash.com/800x400/?technology,platform" alt="Imagen de plataformas" class="content-image">
+        <p>La elección de la plataforma es fundamental para gestionar y presentar el contenido educativo. Algunas plataformas populares incluyen WordPress con plugins educativos, Moodle, y plataformas comerciales como Udemy y Coursera.</p>
+        <p>Cada una tiene características particulares en cuanto a diseño, accesibilidad y herramientas de evaluación, por lo que es importante elegir la que mejor se adapte a las necesidades de tu proyecto.</p>
         <button onclick="openModal('plataformasModal')">Ver más detalles</button>
-
-        <div class="book-animation">
-            <div class="book"></div>
-            <div class="book"></div>
-            <div class="book"></div>
-            <div class="book"></div>
-            <div class="book"></div>
-        </div>
     </section>
 
     <div id="plataformasModal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal('plataformasModal')">&times;</span>
             <h3>Plataformas</h3>
-            <p>WordPress y Moodle son opciones recomendadas para educación en línea, ofreciendo herramientas específicas para el aprendizaje...</p>
+            <p>Además de elegir una plataforma, asegúrate de configurar opciones de monitoreo, informes y análisis de resultados para medir el progreso de los estudiantes y mejorar continuamente el curso.</p>
         </div>
     </div>
 
-    <!-- Más secciones y modales (Diseño, Marketing, Monetización, Evaluación) pueden seguir el mismo patrón... -->
-</div>
+    <section id="beneficios">
+        <h2>4. Beneficios de la Educación en Línea</h2>
+        <p>La educación en línea ofrece flexibilidad y acceso a recursos que pueden ajustarse a las necesidades individuales de cada estudiante. Al aprender en línea, los estudiantes pueden mejorar sus habilidades en cualquier momento y lugar, lo que facilita el aprendizaje continuo y la actualización de conocimientos.</p>
+        <p>La posibilidad de contar con materiales grabados y de interactuar con otros estudiantes de diferentes lugares es otra gran ventaja, permitiendo construir redes de aprendizaje globales.</p>
+        <button onclick="openModal('beneficiosModal')">Ver más detalles</button>
+    </section>
 
-<footer>
-    <p>&copy; 2023 Educación en Línea | <a href="#contact">Contacto</a> | <a href="#privacy">Política de privacidad</a></p>
-</footer>
+    <div id="beneficiosModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('beneficiosModal')">&times;</span>
+            <h3>Beneficios de la Educación en Línea</h3>
+            <p>Los beneficios incluyen flexibilidad, ahorro en desplazamientos y gastos, y la oportunidad de aprender a su propio ritmo. Además, permite acceder a una variedad de recursos digitales, incluyendo bibliotecas, foros, y clases interactivas.</p>
+        </div>
+    </div>
 
-<script>
-    // Funciones para abrir y cerrar modales
-    function openModal(modalId) {
-        document.getElementById(modalId).style.display = "block";
-    }
-    function closeModal(modalId) {
-        document.getElementById(modalId).style.display = "none";
-    }
-    // Cerrar modales al hacer clic fuera de la ventana modal
-    window.onclick = function(event) {
-        let modals = document.getElementsByClassName('modal');
-        for (let i = 0; i < modals.length; i++) {
-            if (event.target == modals[i]) {
-                modals[i].style.display = "none";
-            }
-        }
-    }
-</script>
-
-</body>
-             </html>
+    <section id="testimonios">
+        <h2>5. Testimonios</h2>
+        <p>"Gracias a la educación en línea, he podido aprender nuevas habilidades y avanzar en mi carrera
